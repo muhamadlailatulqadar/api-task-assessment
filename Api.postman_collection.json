@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "fe5c4dfb-e20b-4d9e-b7eb-9a00ed8ea3b6",
+		"name": "Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "rahmani djamel",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "hello8@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "default"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123456789",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/auth/register",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				},
+				"description": "register new user"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/auth/login",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User INFO",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiODIwZWNiYzA0YTJiMmI5MzVlNDQxNDlmYzc2Mzc1MzM4NWE1MjYwOTA2MDU1MTQ4NGQ1NGE1OTU3MmVlNzAwNTVlMzI5ZjE2N2JjYzEyZDYiLCJpYXQiOjE2NTMwODc0MDIuNDQxNzc4LCJuYmYiOjE2NTMwODc0MDIuNDQxNzc4LCJleHAiOjE2ODQ2MjM0MDIuMzYwNzczLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.H9gn1qKyxFSHg84qaFf0lqXtgHo_inqMVhYtHruVHcEbsloFP4t4rhRWFU84HRXVk957Nw7pk0E4qv_YTDI7GObRh8mZUJYvpdvDvRsrG-lx_43b-NAvvRGTb_w3SQaw1H7zHpNe9b97LHeUDGTrk1P4HTl5l1q71AWkpDmYW4-mdXlB64dikT6O4T_0OQmgVZInoMQKQADYAP6mYK0zIaaUUFkL88F_uAPyU4cSqcgDgj8TtuFd1nJrj1PpykVTLySKL3glW8LxSYdNtRZSmRybKXkXh34vt-q7LVospx6Ujm2kQk5oW0kaf677-pzlphEns2d3ye3tczpyXwt3kjhbvtl7hbcQH9elhciVR1vS3CxT2kJZqqarLZg-WSjyw7NYDR45rKC55MB6gWJJ__s5UQTKb2Bh-oLZSSZcy66GjrOPqkJQGGiB3PCDxmGVaCHAgDCQnaXV45YD_Iu1ZXxeepBJOckR-z3LCVM_MmjJUkhdoqkRlZ9sPv-DwjlAEEr35nURxRcVPset_xPCgs2AUSyH3fvy28W0SajUcGgP1z7WldXbySZQyy44_4C_rRON8CV7AVYMCuxVwDMQuD0tcoyycUmKsRFDlWSMcctd1ABr0zOT3pU7dGAwVSI9C-zFeH9rnh5Km6be7iw7pI-feyOcAY0QspoVg2VHK2c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/auth/user",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/auth/logout",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all with pagination",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/auth/users",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ressource",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "add csv file",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiM2Q5YmQ3YjFmYTRjZWMyZGZlOGEyOGQxNzc4ZDk2MGFiZjQ0YmUyMDcxYmY2MzJmOGJkMzRhNTRlOWQzODhlYzNkZGI1NDk3MzA2ZTI3Y2MiLCJpYXQiOjE2NTMxMDA1ODIuOTA0MDU1LCJuYmYiOjE2NTMxMDA1ODIuOTA0MDU1LCJleHAiOjE2ODQ2MzY1ODIuNjk5MDQzLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.g5vnZkMdBmoGBSlGYD8Fi4N7kotqFg5-fdMCnmf0z9Z27I-LeDLmwivIGr5r1rWcZj5nJ3pYcQtTfIZ7NT0R3R0I8-dLi6nru_PMfkHe2M-ez85CFB9HLowFv6WcMSU5HPbR6PhuESJIF-s_3bQOQJI5TkxxpRIYGAtRbduG4_kZYEN5io7RY41QG0jPpp4rkU4_JjnRcLKPxclnlD69sHtVosifvKhFBtKRr38dx3aMAQO04zygn2RmSDV3319uZc6vt-s2MzcnKGw51beUiKzliwC0LkIZPe06DhA3tL9QUGqglC6xCi2mtiq9tZ_nOTsWZqjxWDMgEeBFlnn5HnCCDZCf3kpvvdNlJVdJTPO8JbMBfeHLqFSoScUN0bxXG2qUwmHvT8wYXeGUvVhIRFX9eBVD_ExlutovyRctfC3FiRz_AzRVGOtaAkBjQJL2cbQ8JLkN0jCZB5SmGY5BUtjWVr773jkwY8_JHmhAYM0VAbuq8EpZsv4mC4Bpb3EOoLLS0wJVe0mudaOmMNXDZa1QuI6BPMzAk-ICW3DYh4yZMbLspOVpdTEMZcZtHfKGsa4tZK54aysazG2bSjLMMKXEIcT6sCialoIAW4r_ek7hv9SU-UtqN-mb3Sv0suHhD-w7WMKLPpE_J0BgUYN3qHGEeHAfiQkMuWLDmkJRblQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "uploaded_file",
+							"type": "file",
+							"src": "/C:/Users/Djamel/Desktop/testing.xlsx"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/auth/upload",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update from Csv",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "127.0.0.1:8000/",
+			"type": "default"
+		}
+	]
+}
